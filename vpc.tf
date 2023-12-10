@@ -1,6 +1,6 @@
 
 ##########################################################
-        # Collecting Avialabilty Zones 
+       ## Collecting Avialabilty Zones ##
 ##########################################################
 
 data "aws_availability_zones" "az" {
@@ -9,7 +9,7 @@ data "aws_availability_zones" "az" {
 
 
 ##########################################################
-        # VPC Creation 
+        # VPC Creation # 
 ##########################################################
 
 resource "aws_vpc" "main" {

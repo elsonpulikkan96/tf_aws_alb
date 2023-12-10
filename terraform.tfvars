@@ -25,9 +25,9 @@ ami         = "ami-02a2af70a66af6dfb"
 
 type        = "t2.micro"
 
-vol_size    = "30"
+vol_size    = "10"
 
-key         = "elsonbombay.pem"
+key         = "elsonbombay"
 
 #################################################
         # ASG Requirement

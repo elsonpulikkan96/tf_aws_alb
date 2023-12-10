@@ -24,7 +24,7 @@ EOF
 
 echo "Health Check" > /var/www/html/check.php
 
-wget https://raw.githubusercontent.com/ajish-antony/sample-website/main/index.php -P /var/www/html/ 2>/dev/null
+wget https://raw.githubusercontent.com/elsonpulikkan96/sample_php_website/main/index.php -P /var/www/html/ 2>/dev/null
 
 end=`aws rds describe-db-instances --filters "Name=engine,Values=mysql" --query "*[].[Endpoint.Address]" | grep "[a-z]" | sed 's/[" ]//g'`
 sed -i "s/localhost/$end/g" /var/www/html/index.php

@@ -286,7 +286,7 @@ EOF
 
 echo "Health Check" > /var/www/html/check.php
 
-wget https://raw.githubusercontent.com/ajish-antony/sample-website/main/index.php -P /var/www/html/ 2>/dev/null
+wget https://raw.githubusercontent.com/elsonpulikkan96/sample_php_website/main/index.php -P /var/www/html/ 2>/dev/null
 
 end=`aws rds describe-db-instances --filters "Name=engine,Values=mysql" --query "*[].[Endpoint.Address]" | grep "[a-z]" | sed 's/[" ]//g'`
 sed -i "s/localhost/$end/g" /var/www/html/index.php
@@ -731,7 +731,7 @@ secret_key  = "Mention-Your-Secret-Key"
         # VPC Requirement
 #################################################
 vpc_cidr    = "172.18.0.0/16"
-project     = "ajish"
+project     = "elson"
 subnetcidr  = "3"
 #################################################
         # EC2 Requirement 
@@ -764,13 +764,3 @@ Confirm the changes and Apply the changes to the AWS architecture
 ```sh 
 terraform apply
 ```
-
-## Conclusion
-
-Here I have deployed a complex architecture in AWS using the terraform as IaC in a simpler and efficient way. The whole automated process will make the jobs simpler and can be made available to deploy in any region with required fewer custom edits.
-
-### ⚙️ Connect with Me
-
-<p align="center">
-<a href="mailto:ajishantony95@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://www.linkedin.com/in/ajish-antony/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
